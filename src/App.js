@@ -1,15 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-import Button from './component/Button';
-import Card from './component/Card';
-import Login from './pages/Login';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Login from './pages/Login';
+import Register from './pages/Register';
+import ListProduk from './pages/ListProduk';
+import { useState } from 'react';
 
 function App() {
+  const [auth, setAuth] = useState(localStorage.getItem('token') !== null)
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/list-produk" element={<ListProduk />} />
       </Routes>
     </Router>
   );
