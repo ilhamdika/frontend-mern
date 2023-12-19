@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Button from './component/Button';
+import Card from './component/Card';
 
 function App() {
   return (
@@ -20,6 +21,11 @@ function App() {
           Learn React
         </a>
         <Button>test</Button>
+        <Card
+        name= {'test'}
+        price= {20}
+        quantity= {100}
+        />
       </header>
     </div>
   );
