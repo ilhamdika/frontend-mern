@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const navigate = useNavigate()
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    navigate('/');
   };
 
   return (
@@ -27,6 +34,7 @@ const Navbar = () => {
           }`}
         >
           <a href="#" className="text-white px-4 py-2">Home</a>
+          <button type='button' onClick={handleLogout} className="text-white px-4 py-2">Logout</button>
         </div>
       </div>
     </nav>
