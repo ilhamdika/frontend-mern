@@ -65,7 +65,7 @@ export const ListProduk = () => {
         <h1 className="font-semibold text-4xl flex justify-center items-center dark:text-white">List Produk</h1>
         <div className="grid lg:grid-cols-4 lg:flex-row dekstop:flex-row sm:grid-cols-1 rounded-xl sm:h-auto mt-10">
             {produkList.map((produk) => (
-            <li key={produk._id}>
+            <li className='list-none' key={produk._id}>
                 <div className='mr-3 ml-3 lg:h-28 sm:h-96 sm:w-full sm:my-8 '>
                     <div className='h-auto'>
                         <h3 className="text-3xl mb-2 dark:text-white font-normal text-center transition duration-300 ease-in-out hover:text-blue-500">
