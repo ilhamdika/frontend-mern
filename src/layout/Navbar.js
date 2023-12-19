@@ -17,7 +17,11 @@ const Navbar = () => {
   return (
     <nav className="bg-gray-800 p-4">
       <div className="container mx-auto lg:flex justify-between items-center">
-        <div className="text-white font-bold text-lg">Daftar Produk</div>
+        <div className="text-white font-bold text-lg">
+            <a href='/list-produk'>
+                Daftar Produk
+            </a>
+        </div>
 
         {/* Toggle Button for Mobile */}
         <button
