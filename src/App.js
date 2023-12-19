@@ -6,6 +6,7 @@ import { useState } from 'react';
 
 function App() {
   const [auth, setAuth] = useState(localStorage.getItem('token') !== null)
+  const [token, setToken] = useState(localStorage.getItem('token'));
   return (
     <Router>
       <Routes>

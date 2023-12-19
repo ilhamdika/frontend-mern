@@ -17,13 +17,13 @@ export const Login = () => {
 
             const token = await response.data
             // console.log(token)
-            localStorage.setItem('token', token)
+            // localStorage.setItem('token', token)
+            localStorage.setItem('token', JSON.stringify(token))
             history('/list-produk')
         } catch (error) {
             console.log(error)
         }
     }
-
     
   return (
     <div className="flex items-center justify-center h-screen">
