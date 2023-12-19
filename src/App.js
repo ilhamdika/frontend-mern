@@ -5,10 +5,9 @@ import ListProduk from './pages/ListProduk';
 import AddProduk from './pages/AddProduk';
 import ProdukEdit from './pages/ProdukEdit';
 import { useState } from 'react';
+import ProtectedRoute from './middleware/HOC';
 
 function App() {
-  const [auth, setAuth] = useState(localStorage.getItem('token') !== null)
-  const [token, setToken] = useState(localStorage.getItem('token'));
   return (
     <Router>
       <Routes>
