@@ -33,7 +33,7 @@ const Navbar = () => {
             isMobileMenuOpen ? 'block' : 'hidden'
           }`}
         >
-          <a href="#" className="text-white px-4 py-2">Add Produk</a>
+          <a href="/add-produk" className="text-white px-4 py-2">Add Produk</a>
           <button type='button' onClick={handleLogout} className="text-white px-4 py-2">Logout</button>
         </div>
       </div>
