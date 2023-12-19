@@ -64,7 +64,7 @@ export const ProdukEdit = () => {
         <a href='/list-produk'>
             <IoIosArrowRoundBack className='text-2xl' />
         </a>
-        <h1 className='text-2xl text-bold my-5'>Add</h1>
+        <h1 className='text-2xl text-bold my-5'>Edit Produk</h1>
       <form>
         <div className='mt-1'>
             <label>
