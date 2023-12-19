@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import Button from '../component/Button'
+import Swal from 'sweetalert2'
 
 export const Register = () => {
     const [name, setName] = useState('')
@@ -19,6 +20,11 @@ export const Register = () => {
                 jenis_kelamin
             })
             // console.log(response)
+            Swal.fire({
+                icon: 'success',
+                title: 'Register Berhasil',
+                text: 'Silakan login',
+              });
             history('/')
         } catch (error) {
             console.log(error)

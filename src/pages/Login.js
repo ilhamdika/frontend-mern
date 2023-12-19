@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Button from '../component/Button'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
 export const Login = () => {
     const [email, setEmail] = useState('')
@@ -21,7 +22,12 @@ export const Login = () => {
             localStorage.setItem('token', JSON.stringify(token))
             history('/list-produk')
         } catch (error) {
-            console.log(error)
+            // console.log(error)
+            Swal.fire({
+                icon: 'error',
+                title: 'Login Gagal',
+                text: 'Data yang anda masukan tidak sesuai dengan record kami. Silakan coba lagi',
+              });
         }
     }
     
