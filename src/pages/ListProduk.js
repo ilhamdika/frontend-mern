@@ -28,7 +28,18 @@ export const ListProduk = () => {
         fetchProduk()
     },[tokenOnly])
 
-    console.log(produkList)
+    const handleDelete = async (produkId) => {
+        try {
+            await axios.delete(`https://ill-pink-newt-coat.cyclic.app/api/produk/${produkId}`, {
+                headers: {
+                    Authorization: `Bearer ${tokenOnly}`,
+                },
+            })
+            window.location.reload()
+        } catch (error) {
+            console.log(error)
+        }
+    }
   return (
     <>
     <LayoutPage>
@@ -48,7 +59,7 @@ export const ListProduk = () => {
                     </p>
                     <div className="flex justify-center items-center">
                         <Button className='mt-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-auto' type="button" >Edit</Button>
-                        <Button className='mt-3 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-auto' type="button" >Delete</Button>
+                        <Button className='mt-3 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-auto' type="button" onClick={()=> handleDelete(produk._id)}>Delete</Button>
                     </div>
                 </div>
             </div>
